@@ -1,0 +1,121 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.min-cent-header-container {
+    background-color: var(--quaternary);
+}
+
+.min-cent-header-offer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.min-cent-header-main {
+    padding: 0px 12px;
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--ternary) !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a:hover {
+    color: var(--secondary) !important;
+}
+
+.min-cent-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.min-cent-header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.min-cent-header-search-container {
+    display: flex;
+    align-items: center;
+    background: var(--ternary);
+    gap: 20px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.min-cent-header-search-icon img {
+    margin-left: 10px;
+    margin-bottom: 4px;
+
+}
+
+.min-cent-header-logo img {
+
+    max-width: 150px;
+    max-height: 60px;
+    margin-left: 8px;
+}
+
+.min-cent-header-search-icon img {
+    width: 20px;
+}
+
+.min-cent-header-cart img {
+    width: 20px;
+}
+
+/* .default-header-ss-navbar-modal {
+    display: none;
+} */
+
+.min-cent-header-dropdown img {
+    width: 20px;
+    margin-bottom: 3px;
+
+}
+
+.min-cent-header-number {
+    padding: 3px 5px;
+    font-size: 12px;
+    border: 1px solid var(--ternary);
+    border-radius: 50%;
+    color: var(--ternary);
+    font-size: 13px;
+    position: relative;
+    bottom: 1rem;
+}
+
+@media(max-width:1025px) {
+    .min-cent-header-route-pages {
+        display: none;
+    }
+
+    .min-cent-header-profile {
+        display: none;
+    }
+
+    .min-cent-header-search-container {
+        display: none;
+
+    }
+
+ 
+}
