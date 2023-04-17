@@ -16,13 +16,83 @@
 <body>
     <div class="min-cent-header-container">
         <div class="min-cent-header-offer">
-            EXTRA 5% INSTANT DISCOUNT FOR ALL ONLINE PAYMENTS. FREE DELIVERY. FREE RETURNS.
+            <span>EXTRA 5% INSTANT DISCOUNT FOR ALL ONLINE PAYMENTS. FREE DELIVERY. FREE RETURNS.</span>
+            <marquee direction="left" scrollamount="5" width="100%" height="20">EXTRA 5% INSTANT DISCOUNT FOR ALL ONLINE
+                PAYMENTS. FREE DELIVERY. FREE RETURNS.</marquee>
         </div>
 
         <div class="min-cent-header-main">
 
+            <div class="min-cent-header-menu">
+                <nav class="navbar  min-cent-header-container-top">
+                    <div class=" min-cent-header-ss-container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <!-- <span class="navbar-toggler-icon min-cent-header-ss-toogler"></span> -->
+                            <span> <img src="../../assets/icons/menu.svg" /></span>
+                        </button>
+
+                        <div class="offcanvas offcanvas-start min-cent-header-ss-navbar-modal" tabindex="-1"
+                            id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                            <div class="offcanvas-body min-cent-header-ss-navbar-body">
+
+                                <ul class="navbar-nav justify-content-end flex-grow-1">
+                                    <li class="nav-item" onclick="dropdown('close')">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item" onclick="dropdown('close')">
+                                        <a class="nav-link" href="#">Shop</a>
+                                    </li>
+                                    <li class="nav-item" onclick="dropdown('close')">
+                                        <a class="nav-link" href="#">Contact</a>
+                                    </li>
+                                    <li class="nav-item dropdown min-cent-header-ss-navbar-dropdown"
+                                        onclick="dropdown('others')">
+
+                                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>Others</span>
+                                            <img src="../../assets/icons/toggle.svg" class="min-cent-header-others" />
+
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Others</a></li>
+                                            <li><a class="dropdown-item" href="#">Refund Policy</a></li>
+                                            <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                                            <li><a class="dropdown-item" href="#">Shipping Policy</a></li>
+                                            <li class="border-bottom-0"><a class="dropdown-item" href="#">Terms and
+                                                    Conditions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown min-cent-header-ss-navbar-dropdown"
+                                        onclick="dropdown('account')">
+                                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span>My Account</span>
+                                            <img src="../../assets/icons/toggle.svg" class="min-cent-header-accounts" />
+
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Sign In</a></li>
+                                            <li class="border-bottom-0"><a class="dropdown-item" href="#">Sign Up</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
             <div class="min-cent-header-left">
-               
+
                 <div class="min-cent-header-logo">
                     <img src="../../assets/images/logo-2.png" />
                 </div>
@@ -54,16 +124,72 @@
                     </div>
                 </div>
                 <div class="min-cent-header-cart">
-                    <span> <img src="../../assets/icons/cart.svg" /></span>
-                    <span class="min-cent-header-number">0</span>
+                    <span onclick="myFunction()"> <img src="../../assets/icons/search.svg"
+                            class="min-cent-header-ss-search-img" /></span>
+                    <span> <img src="../../assets/icons/cart.svg" /> <span class="min-cent-header-number">0</span>
+                    </span>
                 </div>
 
+            </div>
+
+        </div>
+        <div class="min-cent-header-ss-middle-center">
+            <div class="min-cent-header-middle-search-container">
+                <input type="text" placeholder="Search for Products" />
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script>
+        function myFunction() {
+            let x = document.getElementsByClassName("min-cent-header-ss-middle-center");
+            let y = document.getElementsByClassName("min-cent-header-ss-navbar-modal");
+            console.log(x);
+            console.log(y);
+            if (x[0].style.display === "none") {
+                x[0].style.display = "flex";
+                y[0].style.marginTop = '163px'
+            } else {
+                x[0].style.display = "none";
+                y[0].style.marginTop = '112px'
+
+            }
+        }
+        function dropdown(drop) {
+
+            let x = document.getElementsByClassName("min-cent-header-others");
+            let y = document.getElementsByClassName("min-cent-header-accounts");
+            if (drop === 'others') {
+                if (x[0].style.transform === 'rotate(90deg)') {
+                    x[0].style.transform = 'rotate(0deg)'
+                }
+                else {
+                    x[0].style.transform = 'rotate(90deg)'
+                    y[0].style.transform = 'rotate(0deg)'
+
+                }
+
+            }
+            else if (drop === 'account') {
+                if (y[0].style.transform === 'rotate(90deg)') {
+                    y[0].style.transform = 'rotate(0deg)'
+                }
+                else {
+                    y[0].style.transform = 'rotate(90deg)'
+                    x[0].style.transform = 'rotate(0deg)'
+
+                }
+            }
+            else {
+                x[0].style.transform = 'rotate(0deg)'
+                y[0].style.transform = 'rotate(0deg)'
+
+
+            }
+        }
+    </script>
 </body>
 
 </html>
